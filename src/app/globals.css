@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.shadow-inner-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    /* filter: blur(10px);
+    pointer-events: none; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.img {
+    min-width: auto;
+    width: 280px;
+    height: 250px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.img-movie {
+    min-width: auto;
+    width: 400px;
+    min-height: auto;
+    height: 400px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.menu-nav::after {
+    content: "";
+    padding-bottom: .1rem;
+    transition: .2s linear;
+    display: block;
+    border-bottom: 2px solid red;
+    transform-origin: left;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
 }
+
+
+.menu-nav:hover::after {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+
+.movie-search {
+    min-width: auto;
+    width: 150px;
+    min-height: auto;
+    height: 150px;
+}
+
