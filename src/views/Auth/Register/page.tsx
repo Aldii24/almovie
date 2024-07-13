@@ -53,7 +53,7 @@ const RegisterViewsPage = () => {
         </button>
       </div>
       <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-500">Already have an account?</p>
+        <p className="text-sm text-gray-500">Have an account?</p>
         <Link href="/auth/login" className="text-red-700 font-medium text-sm">
           Sign In
         </Link>
