@@ -15,8 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Tentukan apakah Navbar harus ditampilkan atau tidak
-
   return (
     <html lang="en">
       <body className={`${manrope.className} `}>

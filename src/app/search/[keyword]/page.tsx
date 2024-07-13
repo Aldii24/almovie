@@ -12,12 +12,11 @@ const SearchMovies = ({ params }: { params: { keyword: any } }) => {
   const decodeKeyword = decodeURI(keyword);
 
   const [searchMovies, setSearchMovies] = useState<any>([]);
-
   const fetchMoviesSearch = async () => {
     const data = await GetPopularFilm(
       "search/movie",
       `query=${decodeKeyword}&language=id-ID`,
-      1
+      ""
     );
     setSearchMovies(data.results);
   };

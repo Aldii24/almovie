@@ -50,6 +50,8 @@ const PopularPage = () => {
     setPopulars(data);
   };
 
+  console.log(populars);
+
   useEffect(() => {
     fetchMoviesPopular();
     // eslint-disable-next-line react-hooks/exhaustive-deps
